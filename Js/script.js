@@ -1,10 +1,6 @@
-
-
-const head = document.createElement('div');
-head.setAttribute('id', 'head');
+const head = document.createElement("div");
+head.setAttribute("id", "head");
 document.body.append(head);
-
-
 
 const heading = document.createElement("h1");
 heading.setAttribute("id", "title");
@@ -125,13 +121,10 @@ function Clear() {
   output.value = "";
 }
 
-
-
-
 const regex = /[0-9\/]+/;
- document.getElementById("result").addEventListener("keypress", (event) => {
+document.getElementById("result").addEventListener("keypress", (event) => {
   if (!regex.test(event.key)) {
     event.preventDefault();
-     alert("Enter only Numbers betwwen 0 to 9 ");
+    alert("Enter only Numbers betwwen 0 to 9 ");
   }
 });
