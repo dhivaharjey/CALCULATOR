@@ -25,54 +25,6 @@ inputElement.setAttribute("placeholder", "0");
 inputElement.setAttribute("id", "result");
 divCalculator.appendChild(inputElement);
 
-// const attrValues = {
-//   display: "display()",
-//   delete: "del()",
-//   percentage: "dispaly('%')",
-//   division: "dispaly('/')",
-//   7: "dispaly('7')",
-//   8: "dispaly('8')",
-//   9: "dispaly('9')",
-//   multiply: "dispaly('*')",
-//   4: "dispaly('4')",
-//   5: "dispaly('5')",
-//   6: "dispaly('6')",
-//   subtract: "dispaly('-')",
-//   1: "dispaly('1')",
-//   2: "dispaly('2')",
-//   3: "dispaly('3)",
-//   add: "dispaly('+')",
-//   dot: "dispaly('.')",
-//   0: "dispaly('0')",
-// };
-
-// Object.keys(attrValues).forEach((key) => {
-//   // console.log(key);
-//   const btn = document.createElement("button");
-//   btn.setAttribute("onclick", attrValues[key]);
-//   btn.setAttribute("id", key);
-//   divCalculator.append(btn);
-// });
-// document.getElementById("display").innerText = "AC";
-// document.getElementById("delete").innerText = "DEL";
-// document.getElementById("percentage").innerText = "%";
-// document.getElementById("division").innerText = "/";
-// document.getElementById("add").innerText = "+";
-// document.getElementById("multiply").innerText = "*";
-// document.getElementById("subtract").innerText = "-";
-// document.getElementById("dot").innerText = ".";
-// document.getElementById("0").innerText = "0";
-// document.getElementById("1").innerText = "1";
-// document.getElementById("2").innerText = "2";
-// document.getElementById("3").innerText = "3";
-// document.getElementById("4").innerText = "4";
-// document.getElementById("5").innerText = "5";
-// document.getElementById("6").innerText = "6";
-// document.getElementById("7").innerText = "7";
-// document.getElementById("8").innerText = "8";
-// document.getElementById("9").innerText = "9";
-
-////////Creating BUTTON element with ID and TEXT using function
 function create(fn, id, text) {
   const btn = document.createElement("button");
   btn.setAttribute("onclick", fn);
@@ -108,7 +60,10 @@ function display(num) {
 }
 function calculate() {
   try {
-    output.value = eval(output.value);
+    // output.value = eval(output.value);
+    output.value = Number.isInteger(eval(output.value))
+      ? eval(output.value)
+      : eval(output.value).toFixed(2);
   } catch (err) {
     alert("Invalid");
   }

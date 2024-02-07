@@ -9,7 +9,6 @@
   padding: 1rem;
   text-align: center;
   color: brown;
-  box-shadow: 2px 2px 20px rgb(34, 25, 25) !important;
 }
 #head p {
   font-style: italic;
@@ -31,7 +30,7 @@ h1 {
   background-color: #110f0f;
   padding: 1rem;
   border-radius: 1rem;
-  box-shadow: inset 5px 5px 12px #ffff, 5px 5px 12px rgba(0, 0, 0, 0.16);
+  box-shadow: inset 5px 5px 12px #ffff, 5px 5px 12px rgba(114, 110, 110, 0.16);
   display: grid;
   grid-template-columns: repeat(4, 5rem);
 }
@@ -40,7 +39,8 @@ input {
   grid-column: span 4;
   height: 7rem;
   width: 20rem;
-  box-shadow: inset -5px -5px 12px #ffff, inset 5px 5px 12px rgba(0, 0, 0, 0.16);
+  box-shadow: inset -5px -5px 12px #b1a2a2,
+    inset 5px 5px 12px rgba(107, 99, 99, 0.16);
   border-radius: 1rem;
   color: black;
   font-size: 2.5rem;
